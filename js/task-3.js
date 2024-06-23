@@ -1,11 +1,10 @@
-function getElementWidth(content, padding, border) {
-    const widthContent = Number.parseFloat(content);
-    const widthPadding = Number.parseFloat(padding);
-    const widthBorder = Number.parseFloat(border);
-    return widthContent + 2 * (widthPadding + widthBorder);
+function filterArray(numbers, value) {
+    return numbers.filter((number) => number > value);
 }
 
 console.log("\n**********  Task-3  ************");
-console.log(getElementWidth("50px", "8px", "4px"));
-console.log(getElementWidth("60px", "12px", "8.5px"));
-console.log(getElementWidth("200px", "0px", "0px"));
+console.log(filterArray([1, 2, 3, 4, 5], 3)); // [4, 5]
+console.log(filterArray([1, 2, 3, 4, 5], 4)); // [5]
+console.log(filterArray([1, 2, 3, 4, 5], 5)); // []
+console.log(filterArray([12, 24, 8, 41, 76], 38)); // [41, 76]
+console.log(filterArray([12, 24, 8, 41, 76], 20)); // [24, 41, 76]
